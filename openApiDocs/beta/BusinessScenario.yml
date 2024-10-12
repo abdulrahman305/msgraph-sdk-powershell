@@ -360,7 +360,7 @@ paths:
       tags:
         - solutions.businessScenario
       summary: Update plannerPlanConfiguration
-      description: Update the properties of a plannerPlanConfiguration object for a businessScenario.
+      description: Update the properties of a plannerPlanConfiguration object and its plannerPlanConfigurationLocalization collection for a businessScenario.
       externalDocs:
         description: Find more info here
         url: https://learn.microsoft.com/graph/api/plannerplanconfiguration-update?view=graph-rest-beta
@@ -483,11 +483,7 @@ paths:
     post:
       tags:
         - solutions.businessScenario
-      summary: Create plannerPlanConfigurationLocalization
-      description: Create a new plannerPlanConfigurationLocalization object.
-      externalDocs:
-        description: Find more info here
-        url: https://learn.microsoft.com/graph/api/plannerplanconfiguration-post-localizations?view=graph-rest-beta
+      summary: Create new navigation property to localizations for solutions
       operationId: solution.businessScenario.planner.planConfiguration_CreateLocalization
       parameters:
         - name: businessScenario-id
@@ -519,11 +515,8 @@ paths:
     get:
       tags:
         - solutions.businessScenario
-      summary: Get plannerPlanConfigurationLocalization
-      description: Read the properties and relationships of a plannerPlanConfigurationLocalization object.
-      externalDocs:
-        description: Find more info here
-        url: https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-get?view=graph-rest-beta
+      summary: Get localizations from solutions
+      description: Localized names for the plan configuration.
       operationId: solution.businessScenario.planner.planConfiguration_GetLocalization
       parameters:
         - name: businessScenario-id
@@ -575,11 +568,7 @@ paths:
     patch:
       tags:
         - solutions.businessScenario
-      summary: Update plannerPlanConfigurationLocalization
-      description: Update the properties of a plannerPlanConfigurationLocalization object.
-      externalDocs:
-        description: Find more info here
-        url: https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-update?view=graph-rest-beta
+      summary: Update the navigation property localizations in solutions
       operationId: solution.businessScenario.planner.planConfiguration_UpdateLocalization
       parameters:
         - name: businessScenario-id
@@ -618,11 +607,7 @@ paths:
     delete:
       tags:
         - solutions.businessScenario
-      summary: Delete plannerPlanConfigurationLocalization
-      description: Delete a plannerPlanConfigurationLocalization object.
-      externalDocs:
-        description: Find more info here
-        url: https://learn.microsoft.com/graph/api/plannerplanconfiguration-delete-localizations?view=graph-rest-beta
+      summary: Delete navigation property localizations for solutions
       operationId: solution.businessScenario.planner.planConfiguration_DeleteLocalization
       parameters:
         - name: businessScenario-id
@@ -2045,6 +2030,13 @@ components:
               description: Read-only. The date on which task is added to or removed from MyDay.
               format: date
               nullable: true
+            lastModifiedBy:
+              $ref: '#/components/schemas/microsoft.graph.identitySet'
+            lastModifiedDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              format: date-time
+              nullable: true
             orderHint:
               type: string
               description: 'The hint used to order items of this type in a list view. For more information, see Using order hints in plannern.'
@@ -2260,11 +2252,11 @@ components:
       properties:
         displayName:
           type: string
-          description: The display name of the identity. This property is read-only.
+          description: 'The display name of the identity. For drive items, the display name might not always be available or up to date. For example, if a user changes their display name the API might show the new value in a future response, but the items associated with the user don''t show up as changed when using delta.'
           nullable: true
         id:
           type: string
-          description: The identifier of the identity. This property is read-only.
+          description: 'Unique identifier for the identity or actor. For example, in the access reviews decisions API, this property might record the id of the principal, that is, the group, user, or application that''s subject to review.'
           nullable: true
       additionalProperties:
         type: object

@@ -2114,6 +2114,12 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.cloudPcBulkRemoteActionResult'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2024-09-30'
+        date: '2024-05-15'
+        version: 2024-05/BulkSetCloudPcReviewStatus
+        description: 'The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api.'
       x-ms-docs-operation-type: action
   /deviceManagement/comanagedDevices/microsoft.graph.downloadAppDiagnostics:
     post:
@@ -6232,6 +6238,12 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.cloudPcBulkRemoteActionResult'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2024-09-30'
+        date: '2024-05-15'
+        version: 2024-05/BulkSetCloudPcReviewStatus
+        description: 'The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api.'
       x-ms-docs-operation-type: action
   /deviceManagement/managedDevices/microsoft.graph.downloadAppDiagnostics:
     post:
@@ -6368,6 +6380,19 @@ paths:
         - deviceManagement.Actions
       summary: Invoke action enableAndroidDeviceAdministratorEnrollment
       operationId: deviceManagement_enableAndroidDeviceAdministratorEnrollment
+      responses:
+        2XX:
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  /deviceManagement/microsoft.graph.enableEndpointPrivilegeManagement:
+    post:
+      tags:
+        - deviceManagement.Actions
+      summary: Invoke action enableEndpointPrivilegeManagement
+      description: Triggers onboarding of tenant to Microsoft Managed Platform - Cloud (MMP-C).
+      operationId: deviceManagement_enableEndpointPrivilegeManagement
       responses:
         2XX:
           description: Success
@@ -7562,9 +7587,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -7575,6 +7597,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -7916,9 +7941,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -7929,6 +7951,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -7988,9 +8013,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -8001,6 +8023,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -8132,9 +8157,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -8145,6 +8167,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -8564,9 +8589,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -8577,6 +8599,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -8636,9 +8661,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -8649,6 +8671,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -8852,9 +8877,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -8865,6 +8887,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -9212,9 +9237,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -9225,6 +9247,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -9284,9 +9309,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -9297,6 +9319,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -9356,9 +9381,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -9369,6 +9391,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -9425,9 +9450,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -9438,6 +9460,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -9494,9 +9519,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -9507,6 +9529,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -9563,9 +9588,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -9576,6 +9598,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -9632,9 +9657,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -9645,6 +9667,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -9701,9 +9726,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -9714,6 +9736,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -9770,9 +9795,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -9783,6 +9805,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -9839,9 +9864,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -9852,6 +9874,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -9908,9 +9933,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -9921,6 +9943,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -9980,9 +10005,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -9993,6 +10015,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -10368,6 +10393,9 @@ paths:
                 filter:
                   type: string
                   nullable: true
+                skiptoken:
+                  type: string
+                  nullable: true
               additionalProperties:
                 type: object
         required: true
@@ -10409,9 +10437,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -10422,6 +10447,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -10694,9 +10722,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -10707,6 +10732,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -10766,9 +10794,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -10779,6 +10804,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -10838,9 +10866,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -10851,6 +10876,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -10910,9 +10938,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -10923,6 +10948,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -11273,9 +11301,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -11286,6 +11311,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -11345,9 +11373,6 @@ paths:
                   items:
                     type: string
                     nullable: true
-                search:
-                  type: string
-                  nullable: true
                 groupBy:
                   type: array
                   items:
@@ -11358,6 +11383,9 @@ paths:
                   items:
                     type: string
                     nullable: true
+                search:
+                  type: string
+                  nullable: true
                 skip:
                   maximum: 2147483647
                   minimum: -2147483648
@@ -14113,6 +14141,12 @@ paths:
                   type: object
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2024-12-31'
+        date: '2024-09-10'
+        version: 2024-09/getConnectionQualityReports
+        description: 'Starting from December 31, 2024, this API (''getConnectionQualityReports'') will be deprecated and no longer supported. Please use the retrieveConnectionQualityReports API.'
       x-ms-docs-operation-type: action
   /deviceManagement/virtualEndpoint/reports/microsoft.graph.getDailyAggregatedRemoteConnectionReports:
     post:
@@ -14563,6 +14597,74 @@ paths:
             schema:
               type: object
               properties:
+                filter:
+                  type: string
+                  nullable: true
+                select:
+                  type: array
+                  items:
+                    type: string
+                    nullable: true
+                search:
+                  type: string
+                  nullable: true
+                groupBy:
+                  type: array
+                  items:
+                    type: string
+                    nullable: true
+                orderBy:
+                  type: array
+                  items:
+                    type: string
+                    nullable: true
+                skip:
+                  maximum: 2147483647
+                  minimum: -2147483648
+                  type: integer
+                  format: int32
+                  nullable: true
+                top:
+                  maximum: 2147483647
+                  minimum: -2147483648
+                  type: integer
+                  format: int32
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        2XX:
+          description: Success
+          content:
+            application/octet-stream:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: string
+                    format: base64url
+                    nullable: true
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  /deviceManagement/virtualEndpoint/reports/microsoft.graph.retrieveConnectionQualityReports:
+    post:
+      tags:
+        - deviceManagement.Actions
+      summary: Invoke action retrieveConnectionQualityReports
+      operationId: deviceManagement.virtualEndpoint.report_retrieveConnectionQualityReport
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reportName:
+                  $ref: '#/components/schemas/microsoft.graph.cloudPCConnectionQualityReportType'
                 filter:
                   type: string
                   nullable: true
@@ -17675,12 +17777,23 @@ components:
         - crossRegionDisasterRecoveryReport
         - performanceTrendReport
         - inaccessibleCloudPcTrendReport
+        - regionalConnectionQualityTrendReport
+        - regionalConnectionQualityInsightsReport
+        - remoteConnectionQualityReport
       type: string
     microsoft.graph.cloudPCInaccessibleReportName:
       title: cloudPCInaccessibleReportName
       enum:
         - inaccessibleCloudPcReports
         - inaccessibleCloudPcTrendReport
+        - unknownFutureValue
+      type: string
+    microsoft.graph.cloudPCConnectionQualityReportType:
+      title: cloudPCConnectionQualityReportType
+      enum:
+        - remoteConnectionQualityReport
+        - regionalConnectionQualityTrendReport
+        - regionalConnectionQualityInsightsReport
         - unknownFutureValue
       type: string
     microsoft.graph.cloudPcUserSettingAssignment:
@@ -19631,7 +19744,7 @@ components:
               nullable: true
             isManagementRestricted:
               type: boolean
-              description: 'true if the user is a member of a restricted management administrative unit, which requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a user who is a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.'
+              description: 'true if the user is a member of a restricted management administrative unit. Default value is false. Read-only.  To manage a user who is a member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.'
               nullable: true
             isResourceAccount:
               type: boolean
@@ -20211,6 +20324,7 @@ components:
         - resourceAccessPolicy
         - win32app
         - deviceManagmentConfigurationAndCompliancePolicy
+        - hardwareConfiguration
       type: string
       description: This enum represents associated assignment payload type
       x-ms-enum:
@@ -20253,6 +20367,9 @@ components:
           - value: deviceManagmentConfigurationAndCompliancePolicy
             description: Indicates that this filter is associated with a configuration or compliance policy on Device Configuration v2 Infrastructure payload type
             name: deviceManagmentConfigurationAndCompliancePolicy
+          - value: hardwareConfiguration
+            description: Indicates that this filter is associated with Bios Configurations And Other Settings payload type
+            name: hardwareConfiguration
     microsoft.graph.deviceManagementComplianceActionType:
       title: deviceManagementComplianceActionType
       enum:
@@ -20387,26 +20504,26 @@ components:
               nullable: true
             categoryId:
               type: string
-              description: Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
+              description: Specify category in which the setting is under. Support $filters.
               nullable: true
             description:
               type: string
-              description: Description of the item
+              description: Description of the setting.
               nullable: true
             displayName:
               type: string
-              description: Display name of the item
+              description: 'Name of the setting. For example: Allow Toast.'
               nullable: true
             helpText:
               type: string
-              description: Help text of the item
+              description: Help text of the setting. Give more details of the setting.
               nullable: true
             infoUrls:
               type: array
               items:
                 type: string
                 nullable: true
-              description: List of links more info for the setting can be found at
+              description: List of links more info for the setting can be found at.
             keywords:
               type: array
               items:
@@ -20430,7 +20547,7 @@ components:
               description: List of referred setting information.
             rootDefinitionId:
               type: string
-              description: Root setting definition if the setting is a child setting.
+              description: Root setting definition id if the setting is a child setting.
               nullable: true
             settingUsage:
               $ref: '#/components/schemas/microsoft.graph.deviceManagementConfigurationSettingUsage'
@@ -22150,7 +22267,7 @@ components:
               description: Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the user’s local device.
               nullable: true
             contentInfo:
-              description: Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
+              $ref: '#/components/schemas/microsoft.graph.Json'
             contentUrl:
               type: string
               description: 'Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).'
@@ -22406,7 +22523,7 @@ components:
               $ref: '#/components/schemas/microsoft.graph.passwordSingleSignOnSettings'
             preferredSingleSignOnMode:
               type: string
-              description: 'Specifies the single sign-on mode configured for this application. Microsoft Entra ID uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Microsoft Entra My Apps. The supported values are password, saml, notSupported, and oidc.'
+              description: 'Specifies the single sign-on mode configured for this application. Microsoft Entra ID uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Microsoft Entra My Apps. The supported values are password, saml, notSupported, and oidc. Note: This field might be null for older SAML apps and for OIDC applications where it isn''t set automatically.'
               nullable: true
             preferredTokenSigningKeyEndDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
@@ -22585,7 +22702,7 @@ components:
             appRoleId:
               pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
               type: string
-              description: 'The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application''s service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.'
+              description: 'The identifier (id) for the app role that is assigned to the principal. This app role must be exposed in the appRoles property on the resource application''s service principal (resourceId). If the resource application hasn''t declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.'
               format: uuid
             creationTimestamp:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
@@ -22898,7 +23015,7 @@ components:
               nullable: true
             isOnlineMeeting:
               type: boolean
-              description: 'True if this event has online meeting information (that is, onlineMeeting points to an onlineMeetingInfo resource), false otherwise. Default is false (onlineMeeting is null). Optional.  After you set isOnlineMeeting to true, Microsoft Graph initializes onlineMeeting. Subsequently Outlook ignores any further changes to isOnlineMeeting, and the meeting remains available online.'
+              description: 'True if this event has online meeting information (that is, onlineMeeting points to an onlineMeetingInfo resource), false otherwise. Default is false (onlineMeeting is null). Optional.  After you set isOnlineMeeting to true, Microsoft Graph initializes onlineMeeting. Outlook then ignores any further changes to isOnlineMeeting, and the meeting remains available online.'
               nullable: true
             isOrganizer:
               type: boolean
@@ -22936,7 +23053,7 @@ components:
             originalStart:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Represents the start time of an event when it is initially created as an occurrence or exception in a recurring series. This property isn''t returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
+              description: 'Represents the start time of an event when it''s initially created as an occurrence or exception in a recurring series. This property isn''t returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
               nullable: true
             originalStartTimeZone:
@@ -22974,7 +23091,7 @@ components:
               nullable: true
             transactionId:
               type: string
-              description: 'A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client''s prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.'
+              description: 'A custom identifier specified by a client app for the server to avoid redundant POST operations if the client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client''s prior create-event request. After you set transactionId when creating an event, you can''t change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.'
               nullable: true
             type:
               $ref: '#/components/schemas/microsoft.graph.eventType'
@@ -22984,7 +23101,7 @@ components:
               nullable: true
             webLink:
               type: string
-              description: 'The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.'
+              description: 'The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you''re signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can''t be accessed from within an iFrame.'
               nullable: true
             attachments:
               type: array
@@ -23009,7 +23126,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.event'
-              description: 'The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but doesn''t include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.'
+              description: 'The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern and exceptions that have been modified. It doesn''t include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.'
               x-ms-navigationProperty: true
             multiValueExtendedProperties:
               type: array
@@ -23314,7 +23431,7 @@ components:
               nullable: true
             displayName:
               type: string
-              description: 'The contact''s display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.'
+              description: 'The contact''s display name. You can specify the display name in a create or update operation. Later updates to other properties might cause an automatically generated value to overwrite the displayName value you specified. To preserve a pre-existing value, always include it as displayName in an update operation.'
               nullable: true
             emailAddresses:
               type: array
@@ -23544,7 +23661,7 @@ components:
               nullable: true
             enrollmentType:
               type: string
-              description: 'Enrollment type of the device. This property is set by Intune. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.'
+              description: 'Enrollment type of the device. This property is set by Intune. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth,appleUserEnrollment, appleUserEnrollmentWithServiceAccount. NOTE: This property might return other values apart from those listed.'
               nullable: true
             extensionAttributes:
               $ref: '#/components/schemas/microsoft.graph.onPremisesExtensionAttributes'
@@ -23564,7 +23681,7 @@ components:
               nullable: true
             isManagementRestricted:
               type: boolean
-              description: 'Indicates whether the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. The default value is false. Read-only.  To manage a device that''s a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.'
+              description: 'Indicates whether the device is a member of a restricted management administrative unit. The default value is false. Read-only.  To manage a device that''s a member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.'
               nullable: true
             isRooted:
               type: boolean
@@ -23857,6 +23974,12 @@ components:
                 $ref: '#/components/schemas/microsoft.graph.baseSitePage'
               description: The collection of pages in the baseSitePages list on this site.
               x-ms-navigationProperty: true
+            pageTemplates:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.pageTemplate'
+              description: The collection of page templates on this site.
+              x-ms-navigationProperty: true
             permissions:
               type: array
               items:
@@ -23941,7 +24064,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.assignedLabel'
-              description: 'The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.'
+              description: 'The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role.'
             assignedLicenses:
               type: array
               items:
@@ -24015,7 +24138,7 @@ components:
               nullable: true
             isManagementRestricted:
               type: boolean
-              description: 'Indicates whether the group is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. The default value is false. Read-only.  To manage a group member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.'
+              description: 'Indicates whether the group is a member of a restricted management administrative unit. The default value is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.'
               nullable: true
             isSubscribedByMail:
               type: boolean
@@ -24240,7 +24363,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: 'The owners of the group who can be users or service principals. Nullable. If this property isn''t specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1); Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,''Role'')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).'
+              description: 'The owners of the group who can be users or service principals. Limited to 100 owners. Nullable. If this property isn''t specified when creating a Microsoft 365 group the calling user (admin or non-admin) is automatically assigned as the group owner. A non-admin user can''t explicitly add themselves to this collection when they''re creating the group. For more information, see the related known issue. For security groups, the admin user isn''t automatically added to this collection. For more information, see the related known issue. Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1); Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,''Role'')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).'
               x-ms-navigationProperty: true
             permissionGrants:
               type: array
@@ -25490,6 +25613,11 @@ components:
               description: The meeting start time in UTC. Required when you create an online meeting.
               format: date-time
               nullable: true
+            aiInsights:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.callAiInsight'
+              x-ms-navigationProperty: true
             meetingAttendanceReport:
               $ref: '#/components/schemas/microsoft.graph.meetingAttendanceReport'
             recordings:
@@ -26015,7 +26143,7 @@ components:
               nullable: true
             region:
               type: string
-              description: 'Represents the region of the organization or the user. For users with multigeo licenses, the property contains the user''s region (if available). For users without multigeo licenses, the property contains the organization''s region.The region value can be any region supported by the Teams payload. The possible values are: Americas, Europe and MiddleEast, Asia Pacific, UAE, Australia, Brazil, Canada, Switzerland, Germany, France, India, Japan, South Korea, Norway, Singapore, United Kingdom, South Africa, Sweden, Qatar, Poland, Italy, Israel, USGov Community Cloud, USGov Community Cloud High, USGov Department of Defense, and China.'
+              description: 'Represents the region of the organization or the user. For users with multigeo licenses, the property contains the user''s region (if available). For users without multigeo licenses, the property contains the organization''s region.The region value can be any region supported by the Teams payload. The possible values are: Americas, Europe and MiddleEast, Asia Pacific, UAE, Australia, Brazil, Canada, Switzerland, Germany, France, India, Japan, South Korea, Norway, Singapore, United Kingdom, South Africa, Sweden, Qatar, Poland, Italy, Israel, Spain, Mexico, USGov Community Cloud, USGov Community Cloud High, USGov Department of Defense, and China.'
               nullable: true
             associatedTeams:
               type: array
@@ -26185,7 +26313,7 @@ components:
       properties:
         settingDefinitionId:
           type: string
-          description: Setting definition id that is being referred to a setting. Applicable for reusable setting.
+          description: Setting definition id that is being referred to a setting. Applicable for reusable setting
           nullable: true
       additionalProperties:
         type: object
@@ -26609,6 +26737,11 @@ components:
               $ref: '#/components/schemas/microsoft.graph.printer'
           additionalProperties:
             type: object
+    microsoft.graph.Json:
+      title: Json
+      type: object
+      additionalProperties:
+        type: object
     microsoft.graph.status:
       title: status
       enum:
@@ -26629,7 +26762,7 @@ components:
           description: Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
           nullable: true
         content:
-          description: Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
+          $ref: '#/components/schemas/microsoft.graph.Json'
         description:
           type: string
           description: 'Optional. Longer text description of the user''s unique activity (example: document name, first sentence, and/or metadata)'
@@ -27994,7 +28127,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.chatMessageMention'
-              description: 'List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.'
+              description: 'List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, chat, and tag.'
             messageHistory:
               type: array
               items:
@@ -29148,6 +29281,24 @@ components:
               type: string
               description: Title of the sitePage.
               nullable: true
+          additionalProperties:
+            type: object
+    microsoft.graph.pageTemplate:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.baseSitePage'
+        - title: pageTemplate
+          type: object
+          properties:
+            titleArea:
+              $ref: '#/components/schemas/microsoft.graph.titleArea'
+            canvasLayout:
+              $ref: '#/components/schemas/microsoft.graph.canvasLayout'
+            webParts:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.webPart'
+              description: The collection of web parts on the SharePoint page.
+              x-ms-navigationProperty: true
           additionalProperties:
             type: object
     microsoft.graph.permission:
@@ -30538,10 +30689,10 @@ components:
             description: Windows 10 Azure AD Join using Device Auth.
             name: windowsAzureADJoinUsingDeviceAuth
           - value: appleUserEnrollment
-            description: Device managed by Apple user enrollment
+            description: Indicates the device is enrolled via Apple User Enrollment with Company Portal. It results in an enrollment with a new partition for managed apps and data and which supports a limited set of management capabilities
             name: appleUserEnrollment
           - value: appleUserEnrollmentWithServiceAccount
-            description: Device managed by Apple user enrollment with service account
+            description: Indicates the device is enrolled via Apple User Enrollment with Company Portal using a device enrollment manager user. It results in an enrollment with a new partition for managed apps and data and which supports a limited set of management capabilities
             name: appleUserEnrollmentWithServiceAccount
           - value: azureAdJoinUsingAzureVmExtension
             description: Azure AD Join enrollment when an Azure VM is provisioned
@@ -32243,6 +32394,7 @@ components:
               nullable: true
             allowBreakoutRooms:
               type: boolean
+              description: Indicates whether breakout rooms are enabled for the meeting.
               nullable: true
             allowedPresenters:
               $ref: '#/components/schemas/microsoft.graph.onlineMeetingPresenters'
@@ -32256,6 +32408,7 @@ components:
               nullable: true
             allowPowerPointSharing:
               type: boolean
+              description: Indicates whether PowerPoint live is enabled for the meeting.
               nullable: true
             allowRecording:
               type: boolean
@@ -32271,6 +32424,7 @@ components:
               nullable: true
             allowWhiteboard:
               type: boolean
+              description: Indicates whether whiteboard is enabled for the meeting.
               nullable: true
             anonymizeIdentityForRoles:
               type: array
@@ -32379,6 +32533,40 @@ components:
           description: For broadcast meeting only.
       additionalProperties:
         type: object
+    microsoft.graph.callAiInsight:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: callAiInsight
+          type: object
+          properties:
+            actionItems:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.actionItem'
+            callId:
+              type: string
+              nullable: true
+            contentCorrelationId:
+              type: string
+              nullable: true
+            createdDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              format: date-time
+              nullable: true
+            endDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              format: date-time
+              nullable: true
+            meetingNotes:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.meetingNote'
+            viewpoint:
+              $ref: '#/components/schemas/microsoft.graph.callAiInsightViewPoint'
+          additionalProperties:
+            type: object
     microsoft.graph.meetingAttendanceReport:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -32563,7 +32751,7 @@ components:
               $ref: '#/components/schemas/microsoft.graph.categoryColor'
             displayName:
               type: string
-              description: 'A unique name that identifies a category in the user''s mailbox. After a category is created, the name cannot be changed. Read-only.'
+              description: 'A unique name that identifies a category in the user''s mailbox. After a category is created, the name can''t be changed. Read-only.'
               nullable: true
           additionalProperties:
             type: object
@@ -32695,7 +32883,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.attachment'
-              description: 'The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.'
+              description: 'The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task. Read-only. Nullable.'
               x-ms-navigationProperty: true
             multiValueExtendedProperties:
               type: array
@@ -33122,6 +33310,13 @@ components:
               type: string
               description: Read-only. The date on which task is added to or removed from MyDay.
               format: date
+              nullable: true
+            lastModifiedBy:
+              $ref: '#/components/schemas/microsoft.graph.identitySet'
+            lastModifiedDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              format: date-time
               nullable: true
             orderHint:
               type: string
@@ -33768,11 +33963,11 @@ components:
       properties:
         displayName:
           type: string
-          description: The display name of the identity. This property is read-only.
+          description: 'The display name of the identity. For drive items, the display name might not always be available or up to date. For example, if a user changes their display name the API might show the new value in a future response, but the items associated with the user don''t show up as changed when using delta.'
           nullable: true
         id:
           type: string
-          description: The identifier of the identity. This property is read-only.
+          description: 'Unique identifier for the identity or actor. For example, in the access reviews decisions API, this property might record the id of the principal, that is, the group, user, or application that''s subject to review.'
           nullable: true
       additionalProperties:
         type: object
@@ -33812,7 +34007,7 @@ components:
           properties:
             isEnabled:
               type: boolean
-              description: true if user's itemInsights and meeting hours insights are enabled; false if user's itemInsights and meeting hours insights are disabled. Default is true. Optional.
+              description: True if the user's itemInsights and meeting hours insights are enabled; false if the user's itemInsights and meeting hours insights are disabled. The default value is true. Optional.
           additionalProperties:
             type: object
     microsoft.graph.regionalAndLanguageSettings:
@@ -34264,11 +34459,11 @@ components:
       properties:
         key:
           type: string
-          description: Contains the name of the field that a value is associated with.
+          description: Key.
           nullable: true
         value:
           type: string
-          description: Contains the corresponding value for the specified key.
+          description: Value.
           nullable: true
       additionalProperties:
         type: object
@@ -34956,13 +35151,17 @@ components:
           type: string
           description: 'The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
+        displayName:
+          type: string
+          description: The name of the reaction.
+          nullable: true
         reactionContentUrl:
           type: string
           description: The hosted content URL for the custom reaction type.
           nullable: true
         reactionType:
           type: string
-          description: 'Supported values are Unicode characters and custom. Some backward-compatible reaction types include like, angry, sad, laugh, heart, and surprised.'
+          description: 'The reaction type. Supported values include Unicode characters, custom, and some backward-compatible reaction types, such as like, angry, sad, laugh, heart, and surprised.'
         user:
           $ref: '#/components/schemas/microsoft.graph.chatMessageReactionIdentitySet'
       additionalProperties:
@@ -36479,6 +36678,69 @@ components:
         - newsLink
         - videoNewsLink
       type: string
+    microsoft.graph.titleArea:
+      title: titleArea
+      type: object
+      properties:
+        alternativeText:
+          type: string
+          description: Alternative text on the title area.
+          nullable: true
+        enableGradientEffect:
+          type: boolean
+          description: Indicates whether the title area has a gradient effect enabled.
+          nullable: true
+        imageWebUrl:
+          type: string
+          description: URL of the image in the title area.
+          nullable: true
+        layout:
+          $ref: '#/components/schemas/microsoft.graph.titleAreaLayoutType'
+        serverProcessedContent:
+          $ref: '#/components/schemas/microsoft.graph.serverProcessedContent'
+        showAuthor:
+          type: boolean
+          description: Indicates whether the author should be shown in title area.
+          nullable: true
+        showPublishedDate:
+          type: boolean
+          description: Indicates whether the published date should be shown in title area.
+          nullable: true
+        showTextBlockAboveTitle:
+          type: boolean
+          description: Indicates whether the text block above title should be shown in title area.
+          nullable: true
+        textAboveTitle:
+          type: string
+          description: The text above title line.
+          nullable: true
+        textAlignment:
+          $ref: '#/components/schemas/microsoft.graph.titleAreaTextAlignmentType'
+      additionalProperties:
+        type: object
+    microsoft.graph.canvasLayout:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: canvasLayout
+          type: object
+          properties:
+            horizontalSections:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.horizontalSection'
+              description: Collection of horizontal sections on the SharePoint page.
+              x-ms-navigationProperty: true
+            verticalSection:
+              $ref: '#/components/schemas/microsoft.graph.verticalSection'
+          additionalProperties:
+            type: object
+    microsoft.graph.webPart:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: webPart
+          type: object
+          additionalProperties:
+            type: object
     microsoft.graph.sharePointIdentitySet:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.identitySet'
@@ -38879,6 +39141,47 @@ components:
           nullable: true
       additionalProperties:
         type: object
+    microsoft.graph.actionItem:
+      title: actionItem
+      type: object
+      properties:
+        ownerDisplayName:
+          type: string
+          nullable: true
+        text:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.meetingNote:
+      title: meetingNote
+      type: object
+      properties:
+        subpoints:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.meetingNoteSubpoint'
+        text:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.callAiInsightViewPoint:
+      title: callAiInsightViewPoint
+      type: object
+      properties:
+        mentionEvents:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.mentionEvent'
+      additionalProperties:
+        type: object
     microsoft.graph.attendanceRecord:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -39608,17 +39911,17 @@ components:
           $ref: '#/components/schemas/microsoft.graph.companyDetail'
         description:
           type: string
-          description: Description of the position in question.
+          description: A description for the position in question.
           nullable: true
         endMonthYear:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$'
           type: string
-          description: When the position ended.
+          description: The date when the position ended.
           format: date
           nullable: true
         jobTitle:
           type: string
-          description: The title held when in that position.
+          description: The title of the position.
           nullable: true
         layer:
           maximum: 2147483647
@@ -39637,19 +39940,21 @@ components:
           nullable: true
         secondaryJobTitle:
           type: string
+          description: An optional job title for the position.
           nullable: true
         secondaryRole:
           type: string
+          description: An optional role for the position entailed.
           nullable: true
         startMonthYear:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$'
           type: string
-          description: The start month and year of the position.
+          description: The start date of the position.
           format: date
           nullable: true
         summary:
           type: string
-          description: summary of the position.
+          description: The summary of the position.
           nullable: true
       additionalProperties:
         type: object
@@ -39680,6 +39985,7 @@ components:
           nullable: true
         secondaryDepartment:
           type: string
+          description: Secondary Department Name within a company.
           nullable: true
         webUrl:
           type: string
@@ -40715,7 +41021,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.keyCredentialConfiguration'
-          description: Collection of keyCredential restrictions settings to be applied to an application or service principal.
+          description: Collection of certificate restrictions settings to be applied to an application or service principal.
         passwordCredentials:
           type: array
           items:
@@ -41021,6 +41327,10 @@ components:
       title: teamsAppAuthorization
       type: object
       properties:
+        clientAppId:
+          type: string
+          description: The registration ID of the Microsoft Entra app ID associated with the teamsApp.
+          nullable: true
         requiredPermissionSet:
           $ref: '#/components/schemas/microsoft.graph.teamsAppPermissionSet'
       additionalProperties:
@@ -41566,11 +41876,12 @@ components:
               nullable: true
             contentType:
               type: string
-              description: Indicates the type for the comment.
+              description: The content type of the comment.
             replies:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.workbookCommentReply'
+              description: The list of replies to the comment. Read-only. Nullable.
               x-ms-navigationProperty: true
             task:
               $ref: '#/components/schemas/microsoft.graph.workbookDocumentTask'
@@ -41591,7 +41902,7 @@ components:
           properties:
             comment:
               type: string
-              description: Represents the comment associated with this name.
+              description: The comment associated with this name.
               nullable: true
             name:
               type: string
@@ -41602,13 +41913,13 @@ components:
               description: Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
             type:
               type: string
-              description: 'Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.'
+              description: 'The type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.'
               nullable: true
             value:
-              description: 'Represents the formula that the name is defined to refer to. For example, =Sheet14!$B$2:$H$12 and =4.75. Read-only.'
+              $ref: '#/components/schemas/microsoft.graph.Json'
             visible:
               type: boolean
-              description: Specifies whether the object is visible or not.
+              description: Indicates whether the object is visible.
             worksheet:
               $ref: '#/components/schemas/microsoft.graph.workbookWorksheet'
           additionalProperties:
@@ -41643,11 +41954,11 @@ components:
               description: Indicates whether the last column contains special formatting.
             legacyId:
               type: string
-              description: Legacy Id used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn't be parsed to any other type. Read-only.
+              description: A legacy identifier used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn't be parsed to any other type. Read-only.
               nullable: true
             name:
               type: string
-              description: Name of the table.
+              description: The name of the table.
               nullable: true
             showBandedColumns:
               type: boolean
@@ -41666,19 +41977,19 @@ components:
               description: Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
             style:
               type: string
-              description: 'Constant value that represents the Table style. Possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.'
+              description: 'A constant value that represents the Table style. Possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.'
               nullable: true
             columns:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.workbookTableColumn'
-              description: Represents a collection of all the columns in the table. Read-only.
+              description: The list of all the columns in the table. Read-only.
               x-ms-navigationProperty: true
             rows:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.workbookTableRow'
-              description: Represents a collection of all the rows in the table. Read-only.
+              description: The list of all the rows in the table. Read-only.
               x-ms-navigationProperty: true
             sort:
               $ref: '#/components/schemas/microsoft.graph.workbookTableSort'
@@ -41709,19 +42020,19 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.workbookChart'
-              description: Returns collection of charts that are part of the worksheet. Read-only.
+              description: The list of charts that are part of the worksheet. Read-only.
               x-ms-navigationProperty: true
             names:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.workbookNamedItem'
-              description: Returns collection of names that are associated with the worksheet. Read-only.
+              description: The list of names that are associated with the worksheet. Read-only.
               x-ms-navigationProperty: true
             pivotTables:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.workbookPivotTable'
-              description: Collection of PivotTables that are part of the worksheet.
+              description: The list of piot tables that are part of the worksheet.
               x-ms-navigationProperty: true
             protection:
               $ref: '#/components/schemas/microsoft.graph.workbookWorksheetProtection'
@@ -41729,7 +42040,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.workbookTable'
-              description: Collection of tables that are part of the worksheet. Read-only.
+              description: The list of tables that are part of the worksheet. Read-only.
               x-ms-navigationProperty: true
             tasks:
               type: array
@@ -41906,6 +42217,92 @@ components:
           nullable: true
       additionalProperties:
         type: object
+    microsoft.graph.titleAreaLayoutType:
+      title: titleAreaLayoutType
+      enum:
+        - imageAndTitle
+        - plain
+        - colorBlock
+        - overlap
+        - unknownFutureValue
+      type: string
+    microsoft.graph.serverProcessedContent:
+      title: serverProcessedContent
+      type: object
+      properties:
+        componentDependencies:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.metaDataKeyStringPair'
+          description: A key-value map where keys are string identifiers and values are component ids. SharePoint servers might decide to use this hint to preload the script for corresponding components for performance boost.
+        customMetadata:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.metaDataKeyValuePair'
+          description: A key-value map where keys are string identifier and values are object of custom key-value pair.
+        htmlStrings:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.metaDataKeyStringPair'
+          description: 'A key-value map where keys are string identifiers and values are rich text with HTML format. SharePoint servers treat the values as HTML content and run services like safety checks, search index and link fixup on them.'
+        imageSources:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.metaDataKeyStringPair'
+          description: A key-value map where keys are string identifiers and values are image sources. SharePoint servers treat the values as image sources and run services like search index and link fixup on them.
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.metaDataKeyStringPair'
+          description: A key-value map where keys are string identifiers and values are links. SharePoint servers treat the values as links and run services like link fixup on them.
+        searchablePlainTexts:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.metaDataKeyStringPair'
+          description: A key-value map where keys are string identifiers and values are strings that should be search indexed.
+      additionalProperties:
+        type: object
+    microsoft.graph.titleAreaTextAlignmentType:
+      title: titleAreaTextAlignmentType
+      enum:
+        - left
+        - center
+        - unknownFutureValue
+      type: string
+    microsoft.graph.horizontalSection:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: horizontalSection
+          type: object
+          properties:
+            emphasis:
+              $ref: '#/components/schemas/microsoft.graph.sectionEmphasisType'
+            layout:
+              $ref: '#/components/schemas/microsoft.graph.horizontalSectionLayoutType'
+            columns:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.horizontalSectionColumn'
+              description: The set of vertical columns in this section.
+              x-ms-navigationProperty: true
+          additionalProperties:
+            type: object
+    microsoft.graph.verticalSection:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: verticalSection
+          type: object
+          properties:
+            emphasis:
+              $ref: '#/components/schemas/microsoft.graph.sectionEmphasisType'
+            webparts:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.webPart'
+              description: The set of web parts in this section.
+              x-ms-navigationProperty: true
+          additionalProperties:
+            type: object
     microsoft.graph.sharePointIdentity:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.identity'
@@ -42822,6 +43219,34 @@ components:
         - invited
         - organizationExcludingGuests
       type: string
+    microsoft.graph.meetingNoteSubpoint:
+      title: meetingNoteSubpoint
+      type: object
+      properties:
+        text:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.mentionEvent:
+      title: mentionEvent
+      type: object
+      properties:
+        eventDateTime:
+          pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+          type: string
+          format: date-time
+          nullable: true
+        speaker:
+          $ref: '#/components/schemas/microsoft.graph.identitySet'
+        transcriptUtterance:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
     microsoft.graph.attendanceInterval:
       title: attendanceInterval
       type: object
@@ -45232,11 +45657,11 @@ components:
           properties:
             content:
               type: string
-              description: The content of replied comment.
+              description: The content of the reply.
               nullable: true
             contentType:
               type: string
-              description: Indicates the type for the replied comment.
+              description: The content type for the reply.
             task:
               $ref: '#/components/schemas/microsoft.graph.workbookDocumentTask'
           additionalProperties:
@@ -45332,14 +45757,14 @@ components:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
+              description: The index of the column within the columns collection of the table. Zero-indexed. Read-only.
               format: int32
             name:
               type: string
-              description: Returns the name of the table column.
+              description: The name of the table column.
               nullable: true
             values:
-              description: 'Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.'
+              $ref: '#/components/schemas/microsoft.graph.Json'
             filter:
               $ref: '#/components/schemas/microsoft.graph.workbookFilter'
           additionalProperties:
@@ -45354,10 +45779,10 @@ components:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
+              description: The index of the row within the rows collection of the table. Zero-based. Read-only.
               format: int32
             values:
-              description: 'Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.'
+              $ref: '#/components/schemas/microsoft.graph.Json'
           additionalProperties:
             type: object
     microsoft.graph.workbookTableSort:
@@ -45370,12 +45795,13 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.workbookSortField'
+              description: The list of the current conditions last used to sort the table. Read-only.
             matchCase:
               type: boolean
-              description: Represents whether the casing impacted the last sort of the table. Read-only.
+              description: Indicates whether the casing impacted the last sort of the table. Read-only.
             method:
               type: string
-              description: 'Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.'
+              description: 'The Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.'
           additionalProperties:
             type: object
     microsoft.graph.workbookChart:
@@ -45432,7 +45858,7 @@ components:
           properties:
             name:
               type: string
-              description: Name of the PivotTable.
+              description: The name of the pivot table.
               nullable: true
             worksheet:
               $ref: '#/components/schemas/microsoft.graph.workbookWorksheet'
@@ -45448,7 +45874,7 @@ components:
               $ref: '#/components/schemas/microsoft.graph.workbookWorksheetProtectionOptions'
             protected:
               type: boolean
-              description: Indicates if the worksheet is protected.  Read-only.
+              description: Indicates whether the worksheet is protected.  Read-only.
           additionalProperties:
             type: object
     microsoft.graph.accessAction:
@@ -45488,6 +45914,74 @@ components:
           nullable: true
       additionalProperties:
         type: object
+    microsoft.graph.metaDataKeyStringPair:
+      title: metaDataKeyStringPair
+      type: object
+      properties:
+        key:
+          type: string
+          description: Key of the meta data.
+          nullable: true
+        value:
+          type: string
+          description: Value of the meta data.
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.metaDataKeyValuePair:
+      title: metaDataKeyValuePair
+      type: object
+      properties:
+        key:
+          type: string
+          description: Key of the metadata.
+          nullable: true
+        value:
+          $ref: '#/components/schemas/microsoft.graph.Json'
+      additionalProperties:
+        type: object
+    microsoft.graph.sectionEmphasisType:
+      title: sectionEmphasisType
+      enum:
+        - none
+        - neutral
+        - soft
+        - strong
+        - unknownFutureValue
+      type: string
+    microsoft.graph.horizontalSectionLayoutType:
+      title: horizontalSectionLayoutType
+      enum:
+        - none
+        - oneColumn
+        - twoColumns
+        - threeColumns
+        - oneThirdLeftColumn
+        - oneThirdRightColumn
+        - fullWidth
+        - unknownFutureValue
+      type: string
+    microsoft.graph.horizontalSectionColumn:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: horizontalSectionColumn
+          type: object
+          properties:
+            width:
+              maximum: 2147483647
+              minimum: -2147483648
+              type: integer
+              description: 'Width of the column. A horizontal section is divided into 12 grids. A column should have a value of 1-12 to represent its range spans. For example, there can be two columns both have a width of 6 in a section.'
+              format: int32
+              nullable: true
+            webparts:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.webPart'
+              description: The collection of WebParts in this column.
+              x-ms-navigationProperty: true
+          additionalProperties:
+            type: object
     microsoft.graph.termStore.relationType:
       title: relationType
       enum:
@@ -46294,31 +46788,31 @@ components:
               nullable: true
             separator:
               type: string
-              description: String representing the separator used for the data labels on a chart.
+              description: String that represents the separator used for the data labels on a chart.
               nullable: true
             showBubbleSize:
               type: boolean
-              description: Boolean value representing if the data label bubble size is visible or not.
+              description: Boolean value that represents whether the data label bubble size is visible.
               nullable: true
             showCategoryName:
               type: boolean
-              description: Boolean value representing if the data label category name is visible or not.
+              description: Boolean value that represents whether the data label category name is visible.
               nullable: true
             showLegendKey:
               type: boolean
-              description: Boolean value representing if the data label legend key is visible or not.
+              description: Boolean value that represents whether the data label legend key is visible.
               nullable: true
             showPercentage:
               type: boolean
-              description: Boolean value representing if the data label percentage is visible or not.
+              description: Boolean value that represents whether the data label percentage is visible.
               nullable: true
             showSeriesName:
               type: boolean
-              description: Boolean value representing if the data label series name is visible or not.
+              description: Boolean value that represents whether the data label series name is visible.
               nullable: true
             showValue:
               type: boolean
-              description: Boolean value representing if the data label value is visible or not.
+              description: Boolean value that represents whether the data label value is visible.
               nullable: true
             format:
               $ref: '#/components/schemas/microsoft.graph.workbookChartDataLabelFormat'
@@ -46344,7 +46838,7 @@ components:
           properties:
             overlay:
               type: boolean
-              description: Boolean value for whether the chart legend should overlap with the main body of the chart.
+              description: Indicates whether the chart legend should overlap with the main body of the chart.
               nullable: true
             position:
               type: string
@@ -46352,7 +46846,7 @@ components:
               nullable: true
             visible:
               type: boolean
-              description: A boolean value the represents the visibility of a ChartLegend object.
+              description: Indicates whether the chart legend is visible.
             format:
               $ref: '#/components/schemas/microsoft.graph.workbookChartLegendFormat'
           additionalProperties:
@@ -46365,7 +46859,7 @@ components:
           properties:
             name:
               type: string
-              description: Represents the name of a series in a chart.
+              description: The name of a series in a chart.
               nullable: true
             format:
               $ref: '#/components/schemas/microsoft.graph.workbookChartSeriesFormat'
@@ -46373,7 +46867,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.workbookChartPoint'
-              description: Represents a collection of all points in the series. Read-only.
+              description: A collection of all points in the series. Read-only.
               x-ms-navigationProperty: true
           additionalProperties:
             type: object
@@ -46385,15 +46879,15 @@ components:
           properties:
             overlay:
               type: boolean
-              description: Boolean value representing if the chart title will overlay the chart or not.
+              description: Indicates whether the chart title will overlay the chart or not.
               nullable: true
             text:
               type: string
-              description: Represents the title text of a chart.
+              description: The title text of the chart.
               nullable: true
             visible:
               type: boolean
-              description: A boolean value that represents the visibility of a chart title object.
+              description: Indicates whether the chart title is visible.
             format:
               $ref: '#/components/schemas/microsoft.graph.workbookChartTitleFormat'
           additionalProperties:
@@ -46660,7 +47154,7 @@ components:
           type: string
           description: 'An operator in a cell; for example, =, >, <, <=, or <>.'
         values:
-          description: The values that appear in the cell.
+          $ref: '#/components/schemas/microsoft.graph.Json'
       additionalProperties:
         type: object
     microsoft.graph.workbookIcon:
@@ -46671,11 +47165,11 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Represents the index of the icon in the given set.
+          description: The index of the icon in the given set.
           format: int32
         set:
           type: string
-          description: 'Represents the set that the icon is part of. Possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.'
+          description: 'The set that the icon is part of. Possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.'
       additionalProperties:
         type: object
     microsoft.graph.workbookChartAxis:
@@ -46685,13 +47179,13 @@ components:
           type: object
           properties:
             majorUnit:
-              description: Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
+              $ref: '#/components/schemas/microsoft.graph.Json'
             maximum:
-              description: Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
+              $ref: '#/components/schemas/microsoft.graph.Json'
             minimum:
-              description: Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
+              $ref: '#/components/schemas/microsoft.graph.Json'
             minorUnit:
-              description: Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
+              $ref: '#/components/schemas/microsoft.graph.Json'
             format:
               $ref: '#/components/schemas/microsoft.graph.workbookChartAxisFormat'
             majorGridlines:
@@ -46729,28 +47223,28 @@ components:
           properties:
             bold:
               type: boolean
-              description: Represents the bold status of font.
+              description: Indicates whether the fond is bold.
               nullable: true
             color:
               type: string
-              description: 'HTML color code representation of the text color. for example #FF0000 represents Red.'
+              description: 'The HTML color code representation of the text color. For example #FF0000 represents Red.'
               nullable: true
             italic:
               type: boolean
-              description: Represents the italic status of the font.
+              description: Indicates whether the fond is italic.
               nullable: true
             name:
               type: string
-              description: Font name (for example 'Calibri')
+              description: The font name. For example 'Calibri'.
               nullable: true
             size:
               type: number
-              description: Size of the font (for example 11)
+              description: 'The size of the font. For example,  11.'
               format: double
               nullable: true
             underline:
               type: string
-              description: 'Type of underline applied to the font. The possible values are: None, Single.'
+              description: 'The type of underlining applied to the font. The possible values are: None, Single.'
               nullable: true
           additionalProperties:
             type: object
@@ -46785,7 +47279,7 @@ components:
           type: object
           properties:
             value:
-              description: Returns the value of a chart point. Read-only.
+              $ref: '#/components/schemas/microsoft.graph.Json'
             format:
               $ref: '#/components/schemas/microsoft.graph.workbookChartPointFormat'
           additionalProperties:
@@ -46974,7 +47468,7 @@ components:
           properties:
             visible:
               type: boolean
-              description: Boolean value representing if the axis gridlines are visible or not.
+              description: Indicates whether the axis gridlines are visible.
             format:
               $ref: '#/components/schemas/microsoft.graph.workbookChartGridlinesFormat'
           additionalProperties:
@@ -46991,7 +47485,7 @@ components:
               nullable: true
             visible:
               type: boolean
-              description: A boolean that specifies the visibility of an axis title.
+              description: A Boolean that specifies the visibility of an axis title.
             format:
               $ref: '#/components/schemas/microsoft.graph.workbookChartAxisTitleFormat'
           additionalProperties:
@@ -47004,7 +47498,7 @@ components:
           properties:
             color:
               type: string
-              description: HTML color code representing the color of lines in the chart.
+              description: The HTML color code that represents the color of lines in the chart.
               nullable: true
           additionalProperties:
             type: object

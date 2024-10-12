@@ -5,32 +5,28 @@
 Import-Module Microsoft.Graph.DeviceManagement
 
 $params = @{
-	"@odata.type" = "#microsoft.graph.macOSGeneralDeviceConfiguration"
+	"@odata.type" = "#microsoft.graph.sharedPCConfiguration"
 	description = "Description value"
 	displayName = "Display Name value"
 	version = 7
-	compliantAppsList = @(
-		@{
-			"@odata.type" = "microsoft.graph.appListItem"
-			name = "Name value"
-			publisher = "Publisher value"
-			appStoreUrl = "https://example.com/appStoreUrl/"
-			appId = "App Id value"
-		}
-	)
-	compliantAppListType = "appsInListCompliant"
-	emailInDomainSuffixes = @(
-	"Email In Domain Suffixes value"
-)
-passwordBlockSimple = $true
-passwordExpirationDays = 
-passwordMinimumCharacterSetCount = 
-passwordMinimumLength = 
-passwordMinutesOfInactivityBeforeLock = 
-passwordMinutesOfInactivityBeforeScreenTimeout = 
-passwordPreviousPasswordBlockCount = 
-passwordRequiredType = "alphanumeric"
-passwordRequired = $true
+	accountManagerPolicy = @{
+		"@odata.type" = "microsoft.graph.sharedPCAccountManagerPolicy"
+		accountDeletionPolicy = "diskSpaceThreshold"
+		cacheAccountsAboveDiskFreePercentage = 
+		inactiveThresholdDays = 
+		removeAccountsBelowDiskFreePercentage = 
+	}
+	allowedAccounts = "domain"
+	allowLocalStorage = $true
+	disableAccountManager = $true
+	disableEduPolicies = $true
+	disablePowerPolicies = $true
+	disableSignInOnResume = $true
+	enabled = $true
+	idleTimeBeforeSleepInSeconds = 
+	kioskAppDisplayName = "Kiosk App Display Name value"
+	kioskAppUserModelId = "Kiosk App User Model Id value"
+	maintenanceStartTime = "11:59:24.7240000"
 }
 
 Update-MgDeviceManagementDeviceConfiguration -DeviceConfigurationId $deviceConfigurationId -BodyParameter $params

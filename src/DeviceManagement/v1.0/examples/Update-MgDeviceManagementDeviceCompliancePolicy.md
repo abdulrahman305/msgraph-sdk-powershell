@@ -5,28 +5,20 @@
 Import-Module Microsoft.Graph.DeviceManagement
 
 $params = @{
-	"@odata.type" = "#microsoft.graph.windows10CompliancePolicy"
+	"@odata.type" = "#microsoft.graph.windowsPhone81CompliancePolicy"
 	description = "Description value"
 	displayName = "Display Name value"
 	version = 7
-	passwordRequired = $true
 	passwordBlockSimple = $true
-	passwordRequiredToUnlockFromIdle = $true
-	passwordMinutesOfInactivityBeforeLock = 
 	passwordExpirationDays = 
 	passwordMinimumLength = 
+	passwordMinutesOfInactivityBeforeLock = 
 	passwordMinimumCharacterSetCount = 
 	passwordRequiredType = "alphanumeric"
 	passwordPreviousPasswordBlockCount = 
-	requireHealthyDeviceReport = $true
+	passwordRequired = $true
 	osMinimumVersion = "Os Minimum Version value"
 	osMaximumVersion = "Os Maximum Version value"
-	mobileOsMinimumVersion = "Mobile Os Minimum Version value"
-	mobileOsMaximumVersion = "Mobile Os Maximum Version value"
-	earlyLaunchAntiMalwareDriverEnabled = $true
-	bitLockerEnabled = $true
-	secureBootEnabled = $true
-	codeIntegrityEnabled = $true
 	storageRequireEncryption = $true
 }
 

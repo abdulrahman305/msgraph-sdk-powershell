@@ -5,31 +5,21 @@
 Import-Module Microsoft.Graph.DeviceManagement
 
 $params = @{
-	"@odata.type" = "#microsoft.graph.androidWorkProfileCompliancePolicy"
+	"@odata.type" = "#microsoft.graph.windowsPhone81CompliancePolicy"
 	description = "Description value"
 	displayName = "Display Name value"
 	version = 7
-	passwordRequired = $true
-	passwordMinimumLength = 
-	passwordRequiredType = "alphabetic"
-	passwordMinutesOfInactivityBeforeLock = 
+	passwordBlockSimple = $true
 	passwordExpirationDays = 
+	passwordMinimumLength = 
+	passwordMinutesOfInactivityBeforeLock = 
+	passwordMinimumCharacterSetCount = 
+	passwordRequiredType = "alphanumeric"
 	passwordPreviousPasswordBlockCount = 
-	securityPreventInstallAppsFromUnknownSources = $true
-	securityDisableUsbDebugging = $true
-	securityRequireVerifyApps = $true
-	deviceThreatProtectionEnabled = $true
-	deviceThreatProtectionRequiredSecurityLevel = "secured"
-	securityBlockJailbrokenDevices = $true
+	passwordRequired = $true
 	osMinimumVersion = "Os Minimum Version value"
 	osMaximumVersion = "Os Maximum Version value"
-	minAndroidSecurityPatchLevel = "Min Android Security Patch Level value"
 	storageRequireEncryption = $true
-	securityRequireSafetyNetAttestationBasicIntegrity = $true
-	securityRequireSafetyNetAttestationCertifiedDevice = $true
-	securityRequireGooglePlayServices = $true
-	securityRequireUpToDateSecurityProviders = $true
-	securityRequireCompanyPortalAppIntegrity = $true
 }
 
 New-MgDeviceManagementDeviceCompliancePolicy -BodyParameter $params
